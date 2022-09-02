@@ -49,7 +49,7 @@ function writePassword() {
     console.log("has uppercase letters.")
   };
 
-  function generatePassword(length) {        // found how to at: https://openjavascript.info/2022/03/14 random-password-generator-using-javascript/
+  function generatePassword(length) {        // found how to at: https://openjavascript.info/2022/03/14random-password-generator-using-javascript/
     let password = '';
     let passwordLength = length;
    

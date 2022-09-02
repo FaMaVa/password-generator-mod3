@@ -16,7 +16,7 @@ function writePassword() {
   };
   if (characterChoice >= 8 && characterChoice <= 128) {
     var amount = characterChoice;
-    console.log(amount);
+    console.log("has " + amount + " characters.");
   } else if (characterChoice < 8) {
     alert("Not enough characters!");
     return;
@@ -29,32 +29,24 @@ function writePassword() {
   if (specialChoice === true) {
     characters.push(" ", "!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~");
     console.log("has special characters.");
-  } else {
-    console.log("no special characters.");
   };
 
   var numericChoice = confirm("Click OK to confirm numeric numeric characters.");
   if (numericChoice === true) {
     characters.push("1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
     console.log("has numbers.");
-  } else {
-    console.log("no numbers.");
   };
 
   var lowercaseChoice = confirm("Click OK to confirm including lowercase characters.");
   if (lowercaseChoice === true) {
     characters.push("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
     console.log("has lowercase letters.");
-  } else {
-    console.log("no lowercase letters.");
   };
 
   var uppercaseChoice = confirm("Click OK to confirm including uppercase characters.");
   if (uppercaseChoice === true) {
     characters.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
     console.log("has uppercase letters.")
-  } else {
-    console.log("no uppercase letters.");
   };
 
   function generatePassword(length) {        // found how to at: https://openjavascript.info/2022/03/14 random-password-generator-using-javascript/

@@ -10,7 +10,7 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   var charChoice = prompt("How many characters would you like your password to contain?");
-  characterChoice = parseInt(charChoice, 10)
+  characterChoice = parseInt(charChoice, 10);
   if (!characterChoice) {
     return;
   };
@@ -46,27 +46,26 @@ function writePassword() {
   var uppercaseChoice = confirm("Click OK to confirm including uppercase characters.");
   if (uppercaseChoice === true) {
     characters.push("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
-    console.log("has uppercase letters.")
+    console.log("has uppercase letters.");
   };
 
   function generatePassword(length) {        // found how to at: https://openjavascript.info/2022/03/14random-password-generator-using-javascript/
     let password = '';
     let passwordLength = length;
-   
+
     const array = new Uint32Array(length); // Create 'unsigned' array
     window.crypto.getRandomValues(array); // Assign random values to new array
-   
+
     for (let i = 0; i < passwordLength; i++) {
       password += characters[array[i] % characters.length]; // % operator returns remainder of division
-    }
-   
-    const msg = `Your new password is: "${password}"`
+    };
+
+    const msg = `Your new password is: "${password}"`;
     console.log(msg);
     return password;
-  }
+  };
   var password = generatePassword(amount);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-}
+};

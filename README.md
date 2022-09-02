@@ -18,7 +18,7 @@ N/A
 ## Usage
 
 Link to webpage: 
-<br/> "deployed link"
+<br/> https://famava.github.io/password-generator-mod3/
 <br/>
 <br/>To use this webpage, you must fist click the red "Generate Password" button. Then, you will be asked five prompts: the amount of characters in your password (must be a number higher than 8 and lower than 128) and whether you want special characters, numbers, lowercase letters, and/or uppercase letters within your password. Once you've completed all the prompts, your randomly-generated password will appear in the box that reads "Your secure password" for you to copy and paste. To generate a new password, you must refresh the page and follow the steps again.
 <br/>
